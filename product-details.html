@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUDSLICHI | Product Details</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="product-details.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="header-container">
+            <a href="index.html" class="logo">BUDSLICHI</a>
+            <nav class="header-links">
+                <a href="index.html" class="back-link">← Back to Shop</a>
+                <a href="cart.html" class="cart-link">Cart <span id="cartCount">0</span></a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- PRODUCT DETAILS -->
+    <main class="details-page">
+
+        <!-- PRODUCT IMAGES (thumbnails JS se banti hain) -->
+        <section class="gallery">
+            <div class="thumbnail-row" id="thumbRow"></div>
+            <div class="main-image-wrap" id="imageStage">
+                <img id="mainProductImage" src="" alt="Selected Earbuds">
+            </div>
+        </section>
+
+        <!-- PRODUCT INFORMATION -->
+        <section class="product-information">
+
+            <p class="rating"><span class="star">★</span> <strong id="ratingValue"></strong> <span id="reviewCount"></span></p>
+
+            <h1 id="productName">Beats Studio Buds Plus+ Cosmic Pink</h1>
+
+            <div class="product-price">
+                <span id="productPrice">Rs. 47,500</span>
+                <span id="oldPrice"></span>
+            </div>
+            <p class="installments" id="installments"></p>
+            <p class="option-label">Color: <strong id="colorName"></strong></p>
+            <div class="swatches" id="swatches"></div>
+
+            <p class="stock-left" id="stockLeft"></p>
+            <p class="sku">Sku: <span id="skuValue"></span></p>
+
+            <div class="buy-row">
+                <div class="qty-box">
+                    <button type="button" id="qtyMinus" aria-label="Decrease quantity">−</button>
+                    <input id="qtyInput" type="number" value="1" min="1" max="10" aria-label="Quantity">
+                    <button type="button" id="qtyPlus" aria-label="Increase quantity">+</button>
+                </div>
+                <button id="addToCart" type="button">ADD TO CART</button>
+                <button id="buyNow" type="button">BUY IT NOW</button>
+            </div>
+
+            <div class="product-description">
+                <h3>Product Description</h3>
+                <p id="productDescription">
+                    Experience premium sound quality with stylish, comfortable and modern wireless earbuds.
+                    Designed to make every beat more enjoyable.
+                </p>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- TRUST ROW -->
+    <section class="trust-row">
+        <div><svg viewBox="0 0 24 24"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7z"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg><p><b>Free Delivery</b> over Rs. 5,000</p></div>
+        <div><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 0 1 14-5l2 2M20 12a8 8 0 0 1-14 5l-2-2M20 4v5h-5M4 20v-5h5"/></svg><p><b>7 Days</b> Replacement</p></div>
+        <div><svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 5-3 8-7 10-4-2-7-5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg><p><b>1 Year</b> Warranty</p></div>
+        <div><svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="5"/><path d="M9 13.5L8 21l4-2 4 2-1-7.5"/></svg><p><b>100%</b> Genuine Product</p></div>
+    </section>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <!-- JAVASCRIPT (sirf ek hi baar) -->
+    <script src="product-details.js"></script>
+</body>
+</html>

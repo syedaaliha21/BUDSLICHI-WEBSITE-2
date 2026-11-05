@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart | BUDSLICHI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- header, colors aur quantity box product-details.css se aate hain -->
+    <link rel="stylesheet" href="product-details.css">
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="header-container">
+            <a href="index.html" class="logo">BUDSLICHI</a>
+            <nav class="header-links">
+                <a href="index.html" class="back-link">← Back to Shop</a>
+                <a href="cart.html" class="cart-link">Cart <span id="cartCount">0</span></a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="cart-page">
+        <h1>Shopping Cart</h1>
+        <p class="cart-sub">Review your selected items before purchase.</p>
+
+        <div class="cart-empty" id="cartEmpty" hidden>
+            <p>Your cart is empty.</p>
+            <a class="btn btn-dark" href="index.html">Browse earbuds</a>
+        </div>
+
+        <div class="cart-layout" id="cartLayout">
+
+            <section>
+                <div class="cart-head"><span>Product</span><span>Price</span><span>Quantity</span><span>Total</span></div>
+                <div id="cartItems"></div>
+            </section>
+
+            <aside class="summary">
+                <div class="ship-bar"><div class="ship-fill" id="shipFill"></div></div>
+                <p class="ship-msg" id="shipMsg"></p>
+
+                <div class="sum-row"><span>Subtotal:</span><b id="subtotal"></b></div>
+                <div class="sum-row saved" id="savedRow"><span>You Saved</span><b id="saved"></b></div>
+                <div class="sum-row grand"><span>Grand Total</span><b id="grand"></b></div>
+
+                <p class="installments" id="installments"></p>
+                <p class="note">Taxes and delivery and discounts calculated at checkout</p>
+
+                <button type="button" class="btn btn-dark" id="checkoutBtn">Check Out</button>
+                <a class="btn btn-outline" href="index.html">Continue Shopping</a>
+            </aside>
+        </div>
+    </main>
+
+    <script src="cart.js"></script>
+</body>
+</html>

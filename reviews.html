@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Reviews | BUDSLICHI</title>
+  <link rel="stylesheet" href="reviews.css">
+</head>
+<body>
+
+  <header class="review-navbar">
+    <a href="index.html" class="review-logo">BUDSLICHI<span>.</span></a>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="index.html#products">Earbuds</a>
+      <a href="reviews.html" class="active">Reviews</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="review-hero">
+      <span class="eyebrow">THE BUDSLICHI EXPERIENCE</span>
+      <h1>YOUR VOICE.<br>OUR SOUND.</h1>
+      <p>Real experiences. Honest opinions. Discover what our customers think about BUDSLICHI earbuds.</p>
+    </section>
+
+    <section class="reviews-section">
+      <div class="reviews-heading">
+        <div>
+          <span class="eyebrow">CUSTOMER FEEDBACK</span>
+          <h2>Customer Reviews</h2>
+        </div>
+        <button id="writeReviewBtn" class="primary-btn">Write a Review</button>
+      </div>
+
+      <div class="rating-overview">
+        <div class="rating-summary">
+          <h3 id="averageRating">0.0</h3>
+          <div class="stars">★★★★★</div>
+          <p id="totalReviews">0 customer reviews</p>
+        </div>
+
+        <div class="rating-bars" id="ratingBars"></div>
+      </div>
+
+      <div class="review-controls">
+        <h2>All Reviews</h2>
+        <select id="reviewFilter" aria-label="Filter reviews">
+          <option value="newest">Most Recent</option>
+          <option value="highest">Highest Rating</option>
+          <option value="lowest">Lowest Rating</option>
+        </select>
+      </div>
+
+      <div class="reviews-grid" id="reviewsGrid"></div>
+    </section>
+
+    <section class="write-review-section" id="writeReviewSection">
+      <div class="review-form-container">
+        <span class="eyebrow">SHARE YOUR EXPERIENCE</span>
+        <h2>Write a Review</h2>
+        <p>Tell us about your BUDSLICHI experience.</p>
+
+        <form id="reviewForm" novalidate>
+          <label for="reviewName">Full Name</label>
+          <input type="text" id="reviewName" placeholder="Enter your name" maxlength="60">
+          <small class="error" id="nameError"></small>
+
+          <label for="reviewProduct">Select Product</label>
+          <select id="reviewProduct">
+            <option value="">Choose your earbuds</option>
+            <option value="BUDSLICHI Pro">BUDSLICHI Pro</option>
+            <option value="BUDSLICHI Air">BUDSLICHI Air</option>
+            <option value="BUDSLICHI Max">BUDSLICHI Max</option>
+            <option value="BUDSLICHI Lite">BUDSLICHI Lite</option>
+            <option value="BUDSLICHI Elite">BUDSLICHI Elite</option>
+            <option value="BUDSLICHI Studio">BUDSLICHI Studio</option>
+          </select>
+          <small class="error" id="productError"></small>
+
+          <label>Your Rating</label>
+          <div class="star-selector" id="starSelector" aria-label="Choose rating">
+            <button type="button" data-rating="1" aria-label="1 star">★</button>
+            <button type="button" data-rating="2" aria-label="2 stars">★</button>
+            <button type="button" data-rating="3" aria-label="3 stars">★</button>
+            <button type="button" data-rating="4" aria-label="4 stars">★</button>
+            <button type="button" data-rating="5" aria-label="5 stars">★</button>
+          </div>
+          <small class="error" id="ratingError"></small>
+
+          <label for="reviewTitle">Review Title</label>
+          <input type="text" id="reviewTitle" placeholder="Summarize your experience" maxlength="80">
+          <small class="error" id="titleError"></small>
+
+          <label for="reviewMessage">Your Review</label>
+          <textarea id="reviewMessage" rows="5" placeholder="What did you like about the product?" maxlength="1000"></textarea>
+          <small class="error" id="messageError"></small>
+
+          <button type="submit" class="primary-btn submit-btn">Submit Review</button>
+          <p id="reviewSuccess" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <h2>BUDSLICHI.</h2>
+    <p>Premium Wireless Audio. Designed for Every Beat.</p>
+    <p>© 2026 BUDSLICHI. All rights reserved.</p>
+  </footer>
+
+  <script src="reviews.js"></script>
+</body>
+</html>
